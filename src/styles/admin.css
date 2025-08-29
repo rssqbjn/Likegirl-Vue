@@ -1,0 +1,547 @@
+/* 管理后台全局样式 */
+/* 引入字体 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap');
+
+/* 全局重置 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+  background-color: #f8f9fa;
+  color: #495057;
+  line-height: 1.6;
+}
+/* 管理后台全局样式 */
+
+
+/* 容器样式 */
+.container-fluid {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 网格系统 */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.col-xl-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.col-lg-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* 卡片样式 */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.8rem;
+  box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
+  margin-bottom: 24px;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 24px;
+}
+
+/* 文本样式 */
+.text-muted {
+  color: #6c757d !important;
+  white-space: nowrap;
+}
+
+.font-weight-normal {
+  font-weight: 400 !important;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-lg-right {
+  text-align: left !important;
+}
+
+/* 间距样式 */
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.my-2 {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.py-1 {
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.mr-2 {
+  margin-right: 0.5rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+
+.mt-3 {
+  margin-top: 1rem !important;
+}
+
+/* 对齐样式 */
+.align-items-center {
+  align-items: center !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+/* 按钮样式 */
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.375rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  text-decoration: none;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+  border-radius: 0.4rem;
+}
+
+.btn-danger:hover {
+  color: #fff;
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 0.4rem;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.btn-outline-primary {
+  color: #5369f8;
+  border-color: #5369f8;
+  background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+  background-color: #5369f8;
+  color: #fff;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.2rem;
+}
+
+/* 表格样式 */
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  border-collapse: collapse;
+}
+
+.table-centered th,
+.table-centered td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table th,
+.table td {
+  padding: 0.95rem;
+  vertical-align: middle;
+  border-top: 1px solid #e3eaef;
+}
+
+.thead-light th {
+  color: #495057;
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+/* 徽章样式 */
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.375rem;
+}
+
+.badge-success {
+  color: #fff;
+  background-color: #28a745;
+}
+
+.badge-danger {
+  color: #fff;
+  background-color: #dc3545;
+}
+
+.badge-success-lighten {
+  color: #155724;
+  background-color: #d4edda;
+  font-size: 0.9rem;
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 400;
+  padding: 0.4rem;
+}
+
+.badge-danger-lighten {
+  color: #721c24;
+  background-color: #f8d7da;
+  font-size: 0.9rem;
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 400;
+}
+
+.badge-primary-lighten {
+  color: #004085;
+  background-color: #cce7ff;
+  font-size: 0.9rem;
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 400;
+}
+
+/* 标题样式 */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 700;
+}
+
+h3.my-2.py-1 {
+  font-size: 2rem;
+}
+
+h3.my-2.py-1 i {
+  font-style: normal;
+  font-weight: 200;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+}
+
+h4.header-title.mb-3 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 700;
+}
+
+h4.header-title.mb-3.size_18 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 700;
+}
+
+/* 文本隐藏样式 */
+.textHide {
+  width: 300px;
+  white-space: normal;
+}
+
+.textHide.index {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  max-width: 200px;
+}
+
+/* 颜色样式 */
+.color {
+  color: #999;
+  font-size: 0.875rem;
+}
+
+/* 图标样式 */
+.icon {
+  width: 100px;
+  height: 100px;
+}
+
+i {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 400;
+}
+
+.mdi {
+  font-family: 'Material Design Icons';
+}
+
+.margin_0 {
+  margin: 0 !important;
+}
+
+.mr-1 {
+  margin-right: 0.25rem !important;
+}
+
+.rihjt-0 {
+  margin-right: 0rem !important;
+}
+
+/* 列表样式 */
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+ul {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 400;
+}
+
+ul.text {
+  line-height: 2rem;
+  font-size: 0.9rem;
+}
+
+/* 表单样式 */
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #b6b6b6;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #ff5295;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(255, 82, 149, 0.25);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group.col-sm-4 {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.form-group.mb-3.text_right {
+  text-align: right;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 400;
+}
+
+/* 响应式设计 */
+@media (min-width: 992px) {
+  .text-lg-right {
+    text-align: left !important;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .col-xl-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .col-xl-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* 自定义样式 */
+.hhtext {
+  white-space: normal !important;
+}
+
+.margin_left {
+  margin-left: 10px;
+}
+
+.right_10 {
+  margin-left: 10px;
+  border-radius: 0.6rem;
+}
+
+/* 光标样式 */
+body {
+  cursor: default;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+/* 内容页面样式 */
+.content-page {
+  padding-top: 20px;
+  margin-left: 260px;
+  min-height: calc(100vh - 70px);
+  transition: margin-left 0.3s ease;
+}
+
+@media (max-width: 991.98px) {
+  .content-page {
+    margin-left: 0;
+  }
+}
+
+/* 页面主体样式 */
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* 小屏幕适配 */
+@media (max-width: 480px) {
+  .card-body {
+    padding: 15px;
+  }
+  
+  .container-fluid {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .col-6,
+  .col-md-6,
+  .col-xl-4,
+  .col-lg-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  .row {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+}

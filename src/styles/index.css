@@ -1,0 +1,132 @@
+/* 全局样式入口文件 */
+
+/* 弹窗样式 */
+@import './modal.css';
+
+/* 可以在这里添加其他通用样式 */
+
+/* 通用按钮样式 */
+.btn-modern {
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn-modern:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  background: linear-gradient(45deg, #764ba2, #667eea);
+}
+
+/* 通用卡片样式 */
+.card-modern {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  background: white;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card-modern:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* 通用表格样式 */
+.table-modern {
+  width: 100%;
+  margin-bottom: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table-modern thead th {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 20px 15px;
+  border: none;
+  position: relative;
+}
+
+.table-modern thead th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.table-modern thead th:last-child {
+  border-top-right-radius: 10px;
+}
+
+.table-modern tbody tr {
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table-modern tbody tr:hover {
+  background: linear-gradient(45deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+  transform: scale(1.01);
+}
+
+.table-modern tbody td {
+  padding: 20px 15px;
+  vertical-align: middle;
+  border: none;
+  font-size: 15px;
+  color: #2c3e50;
+}
+
+/* 通用搜索框样式 */
+.search-box {
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 15px 10px 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #495057;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+  font-size: 16px;
+}
+
+/* 通用动画 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}

@@ -1,0 +1,39 @@
+{
+  "redirects": [
+    {
+      "source": "/little",
+      "destination": "/index.html",
+      "type": 200
+    },
+    {
+      "source": "/page/:path*",
+      "destination": "/index.html",
+      "type": 200
+    },
+    {
+      "source": "/leaving",
+      "destination": "/index.html",
+      "type": 200
+    },
+    {
+      "source": "/about",
+      "destination": "/index.html",
+      "type": 200
+    },
+    {
+      "source": "/loveImg",
+      "destination": "/index.html",
+      "type": 200
+    },
+    {
+      "source": "/list",
+      "destination": "/index.html",
+      "type": 200
+    },
+    {
+      "source": "/admin/:path*",
+      "destination": "/index.html",
+      "type": 200
+    }
+  ]
+}

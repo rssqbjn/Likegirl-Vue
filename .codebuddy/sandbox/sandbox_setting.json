@@ -1,0 +1,20 @@
+{
+  "path": "f:\\Projects\\cloudbase-vue-like_gril\\dist",
+  "desc": "清空部署测试",
+  "id": "22dd6ca52fb4487eb1f09623e270434f",
+  "data": {
+    "spaceKey": "22dd6ca52fb4487eb1f09623e270434f",
+    "connections": {
+      "webIDE": "https://22dd6ca52fb4487eb1f09623e270434f.ap-singapore.cloudstudio.club",
+      "preview": "https://22dd6ca52fb4487eb1f09623e270434f--{port}.ap-singapore.cloudstudio.club",
+      "api": "https://22dd6ca52fb4487eb1f09623e270434f--api.ap-singapore.cloudstudio.club",
+      "pty": "https://22dd6ca52fb4487eb1f09623e270434f--pty.ap-singapore.cloudstudio.club"
+    }
+  },
+  "config": {
+    "api": "https://22dd6ca52fb4487eb1f09623e270434f--api.ap-singapore.cloudstudio.club",
+    "pty": "https://22dd6ca52fb4487eb1f09623e270434f--pty.ap-singapore.cloudstudio.club",
+    "region": "ap-shanghai",
+    "spaceKey": "22dd6ca52fb4487eb1f09623e270434f"
+  }
+}

@@ -1,0 +1,245 @@
+/* Like Girl 5.2.0 - 恋爱小记页面样式 */
+
+/* 基础样式 */
+.little_icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+/* 文本单行隐藏 */
+.textOneHide {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 页面特定样式 */
+.little-page {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.little-page .central {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.little-page .central-800 {
+  max-width: 800px;
+}
+
+/* 标题区域 */
+.little-page .title {
+  text-align: center;
+  margin: 3rem 0 2rem;
+  padding-top: 80px;
+}
+
+.little-page .title h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  font-family: 'Noto Serif SC', serif;
+  position: relative;
+}
+
+.little-page .title h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+/* 卡片列表 */
+.little-page .row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.little-page .card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.little-page .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s;
+}
+
+.little-page .card:hover::before {
+  left: 100%;
+}
+
+.little-page .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+  border-color: rgba(102, 126, 234, 0.2);
+}
+
+/* 文章内容 */
+.little-page .little_texts {
+  width: 100%;
+}
+
+.little-page .top-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.little-page .top-title:hover {
+  color: #667eea;
+}
+
+.little-page .top-title .little_icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.little-page .card:hover .little_icon {
+  transform: translateX(3px);
+}
+
+.little-page .info {
+  color: #666;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.little-page .info span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.little-page .info i {
+  font-style: normal;
+  color: #999;
+  margin: 0 0.3rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .little-page .central {
+    padding: 1rem 0.5rem;
+  }
+  
+  .little-page .title {
+    margin: 2rem 0 1.5rem;
+    padding-top: 60px;
+  }
+  
+  .little-page .title h1 {
+    font-size: 2rem;
+  }
+  
+  .little-page .card {
+    padding: 1.5rem;
+    margin: 0 0.5rem;
+  }
+  
+  .little-page .top-title {
+    font-size: 1.2rem;
+  }
+  
+  .little-page .info {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .little-page .title h1 {
+    font-size: 1.8rem;
+  }
+  
+  .little-page .card {
+    padding: 1.2rem;
+  }
+  
+  .little-page .top-title {
+    font-size: 1.1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .little-page .little_icon {
+    align-self: flex-end;
+  }
+}
+
+/* 动画效果 */
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.delay-03s {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* 网格系统 */
+.col-lg-12, .col-md-12, .col-sm-12, .col-sm-x-12 {
+  width: 100%;
+}
+
+/* 链接样式重置 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}

@@ -1,0 +1,14 @@
+
+{
+  "name": "article",
+  "version": "1.0.0",
+  "description": "文章管理云函数，支持AI自动摘要",
+  "main": "index.js",
+  "dependencies": {
+    "@cloudbase/node-sdk": "^2.20.12",
+    "wx-server-sdk": "latest"
+  },
+  "author": "CloudBase",
+  "license": "ISC"
+}
+

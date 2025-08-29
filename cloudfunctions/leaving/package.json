@@ -1,0 +1,11 @@
+{
+  "name": "leaving",
+  "version": "1.0.0",
+  "description": "留言板云函数",
+  "main": "index.js",
+  "dependencies": {
+    "@cloudbase/node-sdk": "^2.4.1"
+  },
+  "author": "",
+  "license": "ISC"
+}

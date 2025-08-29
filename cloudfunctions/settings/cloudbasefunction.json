@@ -1,0 +1,12 @@
+{
+  "name": "settings",
+  "timeout": 60,
+  "runtime": "Nodejs18.15",
+  "memorySize": 256,
+  "handler": "index.main",
+  "installDependency": true,
+  "ignore": [
+    "node_modules/**/*",
+    ".git/**/*"
+  ]
+}

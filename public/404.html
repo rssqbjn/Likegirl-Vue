@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面重定向</title>
+    <script>
+        // SPA 路由重定向脚本
+        (function() {
+            var path = window.location.pathname;
+            var search = window.location.search;
+            var hash = window.location.hash;
+            
+            // 如果不是根路径，重定向到根路径并保存原路径信息
+            if (path !== '/') {
+                var redirectPath = path + search + hash;
+                window.location.replace('/?redirect=' + encodeURIComponent(redirectPath));
+            }
+        })();
+    </script>
+</head>
+<body>
+    <div style="text-align: center; padding: 50px;">
+        <h2>页面跳转中...</h2>
+        <p>如果页面没有自动跳转，请<a href="/">点击这里</a>返回首页</p>
+    </div>
+</body>
+</html>

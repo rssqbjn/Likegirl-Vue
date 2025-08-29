@@ -1,0 +1,510 @@
+/* Like Girl 5.2.0 - 首页样式 */
+
+/* 基础样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Serif SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+}
+
+/* 头部导航样式 */
+.header-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.alogo {
+  text-decoration: none;
+  color: rgb(97, 97, 97);
+  transition: all 0.2s linear;
+}
+
+.alogo:hover {
+  color: #333;
+}
+
+.wenan {
+  color: rgb(97, 97, 97);
+  transition: all 0.2s linear;
+  font-size: 0.9rem;
+}
+
+/* 背景区域样式 */
+.bg-wrap {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.central {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.central-800 {
+  max-width: 800px;
+}
+
+.middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.img-male, .img-female {
+  text-align: center;
+  flex: 1;
+}
+
+.img-male img, .img-female img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.img-male img:hover, .img-female img:hover {
+  transform: scale(1.05);
+}
+
+.img-male span, .img-female span {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.love-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.love-icon img {
+  width: 60px;
+  height: 60px;
+  animation: heartbeat 2s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* 波浪效果 */
+.waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% { transform: translate3d(-90px,0,0); }
+  100% { transform: translate3d(85px,0,0); }
+}
+
+/* 时间显示样式 */
+.time {
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.time span {
+  display: block;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.time b {
+  display: inline-block;
+  margin: 0 0.8rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.time b:hover {
+  transform: translateY(-2px);
+}
+
+/* 卡片区域样式 */
+.card-wrap {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card, .card-b {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before, .card-b::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s;
+}
+
+.card:hover::before, .card-b:hover::before {
+  left: 100%;
+}
+
+.card:hover, .card-b:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.card {
+  flex: 1;
+  min-width: 320px;
+  max-width: 380px;
+}
+
+.card-b {
+  flex: 1;
+  min-width: 480px;
+  max-width: 580px;
+}
+
+.card img, .card-b img {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img, .card-b:hover img {
+  transform: scale(1.1);
+}
+
+.text {
+  flex: 1;
+}
+
+.text span {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.text span a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.text span a:hover {
+  color: #667eea;
+}
+
+.text p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .middle {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+  }
+  
+  .img-male, .img-female {
+    flex: none;
+  }
+  
+  .card-b {
+    min-width: 320px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+  
+  .header .logo h1 {
+    font-size: 1.3rem;
+  }
+  
+  .wenan {
+    font-size: 0.8rem;
+  }
+  
+  .middle {
+    padding: 1.5rem 1rem;
+  }
+  
+  .img-male img, .img-female img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .love-icon img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .time {
+    padding: 3rem 1rem 1rem;
+  }
+  
+  .time span {
+    font-size: 1.2rem;
+  }
+  
+  .time b {
+    margin: 0.3rem;
+    padding: 0.8rem 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .card-wrap {
+    padding: 2rem 1rem;
+  }
+  
+  .card, .card-b {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 2rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  
+  .card img, .card-b img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.8rem;
+  }
+  
+  .middle {
+    gap: 1rem;
+  }
+  
+  .img-male img, .img-female img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .time b {
+    display: block;
+    margin: 0.5rem auto;
+    width: fit-content;
+  }
+}
+
+/* 动画效果 */
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* 选择文本样式 */
+::selection {
+  background: #6f6f6fc7;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: #6f6f6fc7;
+  color: #ffffff;
+}
+
+/* 模糊背景效果 */
+.Blurkg {
+  backdrop-filter: blur(0px) !important;
+  -webkit-backdrop-filter: blur(0px) !important;
+  background: transparent !important;
+}
+
+/* 延迟动画 */
+.delay-03s {
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+
+/* 网格系统 */
+.col-lg-4 {
+  flex: 0 0 33.333333%;
+}
+
+.col-lg-6 {
+  flex: 0 0 50%;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+}
+
+.col-sm-12 {
+  flex: 0 0 100%;
+}
+
+.col-sm-x-12 {
+  flex: 0 0 100%;
+}
+
+.flex-h {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .col-lg-4, .col-lg-6 {
+    flex: 0 0 100%;
+  }
+}

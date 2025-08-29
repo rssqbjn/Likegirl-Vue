@@ -1,0 +1,24 @@
+{
+  "name": "like-girl-admin",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "node server.js"
+  },
+  "dependencies": {
+    "@cloudbase/js-sdk": "^2.19.5",
+    "crypto-js": "^4.2.0",
+    "vue": "^3.3.11",
+    "vue-router": "^4.2.5",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.5.2",
+    "express": "^4.21.2",
+    "vite": "^5.0.8"
+  }
+}
